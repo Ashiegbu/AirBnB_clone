@@ -1,0 +1,1 @@
+This is a README file on 0x00. AirBnB clone - The console Team Project in ALX Software Engineering Program by Wasiu Akindoyin and Chibuzo Ashiegbu from Cohort 9.
