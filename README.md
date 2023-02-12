@@ -1,8 +1,10 @@
 ![image](https://user-images.githubusercontent.com/47593584/218306522-2be965bc-2811-47bb-9afc-dc1e38ba4474.png)
 
-HBNB - The Console
-
+HBNB - The Console <topic>
+==========================
  This repository contains the initial stage of the ALX Software engineering student's project to build a clone of the AirBnB website. This stage implements a backend interface, or console, to manage program data. Console commands allow the user to create, update, and destroy objects, as well as manage file storage. Using a system of JSON serialization/deserialization, storage is persistent between sessions.
+
+
 
 Repository Contents by Project Task
 
@@ -19,18 +21,23 @@ Repository Contents by Project Task
 | 9. More Classes | /models/user.py /models/place.py /models/city.py /models/amenity.py /models/state.py /models/review.py | Dynamically implements more classes |
 | 10. Console 1.0 | console.py /models/engine/file_storage.py | Update the console and file storage system to work dynamically with all classes update file storage |
 
+
 Usage -
 
  The console works both in interactive mode and non-interactive mode, much like a Unix shell. It prints a prompt (hbnb) and waits for the user for input.
 
-| Command  |   Example    |
-| -------- | ------------ |
+|        Command          |          Example            |
+| ----------------------- | --------------------------- |
 | Run the console | ./console.py |
 | Quit the console | (hbnb) quit |
 | Display the help for a command | (hbnb) help <command> |
 | Create an object (print its' id) | (hbnb) create <class> |
 | Show an object | (hbnb) show <class> <id> or (hbnb) <class>.show(<id>) |
 | Destroy an object | (hbnb) destroy <class> <id> or (hbnb) <class>.destroy(<id>) |
+| Show all objects, or all instances of a class | (hbnb) all or (hbnb) all <class> |
+| Update an attribute of an object | (hbnb) update <class> <id> <attribute name> "<attribute value>" or (hbnb) <class>.update(<id>, <attribute name>, "<attribute value>") |
+
+
 
 Interactive mode (example)
 
