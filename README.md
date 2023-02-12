@@ -6,7 +6,7 @@ HBNB - The Console <topic>
 
 
 
-Repository Contents by Project Task
+## Repository Contents by Project Task
 
 | Tasks                         | Files                  | Description           |
 | ------------------------------| ---------------------- | ----------------------|
@@ -22,7 +22,7 @@ Repository Contents by Project Task
 | 10. Console 1.0 | console.py /models/engine/file_storage.py | Update the console and file storage system to work dynamically with all classes update file storage |
 
 
-Usage -
+## Usage
 
  The console works both in interactive mode and non-interactive mode, much like a Unix shell. It prints a prompt (hbnb) and waits for the user for input.
 
@@ -39,10 +39,11 @@ Usage -
 
 
 
-Interactive mode (example)
+### Interactive mode (example)
 
- $ ./console.py
- (hbnb) help
+```bash
+$ ./console.py
+(hbnb) help
 
 Documented commands (type help <topic>):
 ========================================
@@ -52,11 +53,13 @@ EOF  help  quit
 (hbnb)
 (hbnb) quit
 $
+```
 
-Non-interactive mode (example)
+### Non-interactive mode (example)
 
- $ echo "help" | ./console.py
- (hbnb)
+```bash
+$ echo "help" | ./console.py
+(hbnb)
 
 Documented commands (type help <topic>):
 ========================================
@@ -197,3 +200,21 @@ Usage: <class_name>.update(<_id>, )
  (hbnb) User.all()
  
  (hbnb) ["[User] (98bea5de-9cb0-4d78-8a9d-c4de03521c30) {'updated_at': datetime.datetime(2023, 2, 9, 21, 47, 29, 134362), 'name': 'Fred the Frog', 'age': 9, 'id': '98bea5de-9cb0-4d78-8a9d-c4de03521c30', 'created_at': datetime.datetime(2023, 2, 9, 21, 47, 29, 134343)}"]
+
+## Testing :straight_ruler:
+
+Unittests for the HolbertonBnB project are defined in the [tests](./tests)
+folder. To run the entire test suite simultaneously, execute the following command:
+
+```
+$ python3 unittest -m discover tests
+```
+
+Alternatively, you can specify a single test file to run at a time:
+
+```
+$ python3 unittest -m tests/test_console.py
+```
+
+
+# Testing ssh
