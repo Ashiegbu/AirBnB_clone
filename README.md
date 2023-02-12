@@ -2,7 +2,7 @@
 
 HBNB - The Console
 
- This repository contains the initial stage of a student project to build a clone of the AirBnB website. This stage implements a backend interface, or console, to manage program data. Console commands allow the user to create, update, and destroy objects, as well as manage file storage. Using a system of JSON serialization/deserialization, storage is persistent between sessions.
+ This repository contains the initial stage of the ALX Software engineering student's project to build a clone of the AirBnB website. This stage implements a backend interface, or console, to manage program data. Console commands allow the user to create, update, and destroy objects, as well as manage file storage. Using a system of JSON serialization/deserialization, storage is persistent between sessions.
 
 Repository Contents by Project Task
 
@@ -18,6 +18,55 @@ Repository Contents by Project Task
 | 8. Create User class | console.py /models/engine/file_storage.py /models/user.py | Dynamically implements a user class |
 | 9. More Classes | /models/user.py /models/place.py /models/city.py /models/amenity.py /models/state.py /models/review.py | Dynamically implements more classes |
 | 10. Console 1.0 | console.py /models/engine/file_storage.py | Update the console and file storage system to work dynamically with all classes update file storage |
+
+Usage -
+
+ The console works both in interactive mode and non-interactive mode, much like a Unix shell. It prints a prompt (hbnb) and waits for the user for input.
+
+| Command  |   Example    |
+| -------- | ------------ |
+| Run the console | ./console.py |
+| Quit the console | (hbnb) quit |
+| Display the help for a command | (hbnb) help <command> |
+| Create an object (print its' id) | (hbnb) create <class> |
+| Show an object | (hbnb) show <class> <id> or (hbnb) <class>.show(<id>) |
+| Destroy an object | (hbnb) destroy <class> <id> or (hbnb) <class>.destroy(<id>) |
+
+Interactive mode (example)
+
+ $ ./console.py
+ (hbnb) help
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+
+(hbnb)
+(hbnb)
+(hbnb) quit
+$
+
+Non-interactive mode (example)
+
+ $ echo "help" | ./console.py
+ (hbnb)
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+(hbnb)
+$
+$ cat test_help
+help
+$
+$ cat test_help | ./console.py
+(hbnb)
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+(hbnb)
+$
 
 General Use
 
@@ -68,7 +117,7 @@ Usage: show <class_name> <_id>
 
  (hbnb) show BaseModel 3aa5babc-efb6-4041-bfe9-3cc9727588f8
  
- [BaseModel] (3aa5babc-efb6-4041-bfe9-3cc9727588f8) {'id': '3aa5babc-efb6-4041-bfe9-3cc9727588f8', 'created_at': datetime.datetime(2020, 2, 18, 14, 21, 12, 96959), 'updated_at': datetime.datetime(2020, 2, 18, 14, 21, 12, 96971)}
+ [BaseModel] (3aa5babc-efb6-4041-bfe9-3cc9727588f8) {'id': '3aa5babc-efb6-4041-bfe9-3cc9727588f8', 'created_at': datetime.datetime(2023, 2, 8, 14, 21, 12, 96959), 'updated_at': datetime.datetime(2023, 2, 9, 10, 21, 12, 96971)}
  
  (hbnb)
 
@@ -92,7 +141,7 @@ Usage: update <class_name> <_id>
  
  (hbnb) show BaseModel b405fc64-9724-498f-b405-e4071c3d857f
  
- [BaseModel] (b405fc64-9724-498f-b405-e4071c3d857f) {'id': 'b405fc64-9724-498f-b405-e4071c3d857f', 'created_at': datetime.datetime(2020, 2, 18, 14, 33, 45, 729889), 'updated_at': datetime.datetime(2020, 2, 18, 14, 33, 45, 729907), 'first_name': 'person'}
+ [BaseModel] (b405fc64-9724-498f-b405-e4071c3d857f) {'id': 'b405fc64-9724-498f-b405-e4071c3d857f', 'created_at': datetime.datetime(2023, 2, 8, 14, 33, 45, 729889), 'updated_at': datetime.datetime(2023, 2, 9, 10, 33, 45, 729907), 'first_name': 'person'}
  
  (hbnb)
 
@@ -104,7 +153,7 @@ Usage: <class_name>.all()
 
  (hbnb) User.all()
  
- ["[User] (99f45908-1d17-46d1-9dd2-b7571128115b) {'updated_at': datetime.datetime(2020, 2, 19, 21, 47, 34, 92071), 'id': '99f45908-1d17-46d1-9dd2-b7571128115b', 'created_at': datetime.datetime(2020, 2, 19, 21, 47, 34, 92056)}", "[User] (98bea5de-9cb0-4d78-8a9d-c4de03521c30) {'updated_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134362), 'id': '98bea5de-9cb0-4d78-8a9d-c4de03521c30', 'created_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134343)}"]
+ ["[User] (99f45908-1d17-46d1-9dd2-b7571128115b) {'updated_at': datetime.datetime(2023, 2, 8, 21, 47, 34, 92071), 'id': '99f45908-1d17-46d1-9dd2-b7571128115b', 'created_at': datetime.datetime(2023, 2, 8, 21, 47, 34, 92056)}", "[User] (98bea5de-9cb0-4d78-8a9d-c4de03521c30) {'updated_at': datetime.datetime(2023, 2, 9, 11, 47, 29, 134362), 'id': '98bea5de-9cb0-4d78-8a9d-c4de03521c30', 'created_at': datetime.datetime(2023, 2, 8, 21, 47, 29, 134343)}"]
 
 Example 1: Destroy a User
 
@@ -116,7 +165,7 @@ Usage: <class_name>.destroy(<_id>)
  
  (hbnb) User.all()
  
- (hbnb) ["[User] (98bea5de-9cb0-4d78-8a9d-c4de03521c30) {'updated_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134362), 'id': '98bea5de-9cb0-4d78-8a9d-c4de03521c30', 'created_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134343)}"]
+ (hbnb) ["[User] (98bea5de-9cb0-4d78-8a9d-c4de03521c30) {'updated_at': datetime.datetime(2023, 2, 9, 21, 47, 29, 134362), 'id': '98bea5de-9cb0-4d78-8a9d-c4de03521c30', 'created_at': datetime.datetime(2023, 2, 9, 21, 47, 29, 134343)}"]
 
 Example 2: Update User (by attribute)
 
@@ -128,7 +177,7 @@ Usage: <class_name>.update(<_id>, <attribute_name>, <attribute_value>)
  
  (hbnb) User.all()
  
- (hbnb) ["[User] (98bea5de-9cb0-4d78-8a9d-c4de03521c30) {'updated_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134362), 'id': '98bea5de-9cb0-4d78-8a9d-c4de03521c30', 'name': 'Todd the Toad', 'created_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134343)}"]
+ (hbnb) ["[User] (98bea5de-9cb0-4d78-8a9d-c4de03521c30) {'updated_at': datetime.datetime(2023, 2, 9, 21, 47, 29, 134362), 'id': '98bea5de-9cb0-4d78-8a9d-c4de03521c30', 'name': 'Todd the Toad', 'created_at': datetime.datetime(2023, 2, 9, 21, 47, 29, 134343)}"]
 
 Example 3: Update User (by dictionary)
 
@@ -140,4 +189,4 @@ Usage: <class_name>.update(<_id>, )
  
  (hbnb) User.all()
  
- (hbnb) ["[User] (98bea5de-9cb0-4d78-8a9d-c4de03521c30) {'updated_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134362), 'name': 'Fred the Frog', 'age': 9, 'id': '98bea5de-9cb0-4d78-8a9d-c4de03521c30', 'created_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134343)}"]
+ (hbnb) ["[User] (98bea5de-9cb0-4d78-8a9d-c4de03521c30) {'updated_at': datetime.datetime(2023, 2, 9, 21, 47, 29, 134362), 'name': 'Fred the Frog', 'age': 9, 'id': '98bea5de-9cb0-4d78-8a9d-c4de03521c30', 'created_at': datetime.datetime(2023, 2, 9, 21, 47, 29, 134343)}"]
