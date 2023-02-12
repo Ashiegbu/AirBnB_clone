@@ -182,7 +182,7 @@ Usage: <class_name>.update(<_id>, )
 (hbnb) User.all()
 (hbnb) ["[User] (98bea5de-9cb0-4d78-8a9d-c4de03521c30) {'updated_at': datetime.datetime(2023, 2, 9, 21, 47, 29, 134362), 'name': 'Fred the Frog', 'age': 9, 'id': '98bea5de-9cb0-4d78-8a9d-c4de03521c30', 'created_at': datetime.datetime(2023, 2, 9, 21, 47, 29, 134343)}"]
 
-## Testing :straight_ruler:
+### Testing :straight_ruler:
 
 Unittests for the HolbertonBnB project are defined in the [tests](./tests)
 folder. To run the entire test suite simultaneously, execute the following command:
