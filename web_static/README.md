@@ -1,1 +1,1 @@
-HTML page that displays a header and a footer
+# AirBnB clone - Web static
